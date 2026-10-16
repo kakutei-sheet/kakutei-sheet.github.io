@@ -1,0 +1,24 @@
+:root{--teal:#0F766E;--ink:#0F172A;--sub:#475569;--line:#E2E8F0;--bg:#F8FAFC;--card:#fff;--key:#FEF3C7;--ok:#ECFDF5;--warn:#FEF2F2}
+@media (prefers-color-scheme:dark){:root{--ink:#E2E8F0;--sub:#94A3B8;--line:#334155;--bg:#0B1220;--card:#111A2E;--key:#3B2F0B;--ok:#062E26;--warn:#3A1010}}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;background:var(--bg);color:var(--ink);line-height:1.75}
+header{background:var(--teal);color:#fff;padding:14px 16px}
+header a{color:#fff;text-decoration:none;font-weight:700}
+main{max-width:760px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:1.5rem;line-height:1.4;margin:.4em 0}
+h2{font-size:1.15rem;margin-top:2em;border-left:5px solid var(--teal);padding-left:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+label{display:block;font-weight:700;margin-top:12px}
+small,.sub{color:var(--sub)}
+input,select{width:100%;font-size:1.05rem;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);margin-top:4px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:520px){.row{grid-template-columns:1fr}}
+.result{background:var(--key);border-radius:12px;padding:14px 16px;margin-top:16px}
+.result b{font-size:1.4rem}
+.judge{border-radius:12px;padding:14px 16px;margin-top:12px;font-weight:700}
+.judge.ok{background:var(--ok)}.judge.ng{background:var(--warn)}
+table{width:100%;border-collapse:collapse;font-size:.92rem}td{white-space:nowrap}td,th{padding:8px;border-bottom:1px solid var(--line);text-align:right}td:first-child,th:first-child{text-align:left}table.wrap td{white-space:normal;text-align:left}table.tight td:first-child{white-space:normal}table.tight td,table.tight th{padding:8px 4px}
+.cta{display:block;background:var(--teal);color:#fff;text-align:center;font-weight:700;padding:14px;border-radius:12px;text-decoration:none;margin-top:12px}
+.tools a{display:block;padding:14px 16px;border:1px solid var(--line);border-radius:12px;margin:10px 0;background:var(--card);color:var(--ink);text-decoration:none}
+.tools a b{color:var(--teal)}
+footer{max-width:760px;margin:0 auto;padding:20px 16px;color:var(--sub);font-size:.85rem}

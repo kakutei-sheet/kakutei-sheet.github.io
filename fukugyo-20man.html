@@ -1,0 +1,36 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>副業20万円ルール 判定ツール｜副業の確定申告かんたん計算</title><meta name="description" content="会社員の副業で確定申告が必要かを、収入と経費から判定する無料ツール。所得20万円の考え方と、住民税の申告についても解説。">
+<link rel="canonical" href="https://kakutei-sheet.github.io/fukugyo-20man.html"><link rel="stylesheet" href="style.css"></head><body>
+<header><a href="index.html">副業の確定申告かんたん計算</a></header>
+<main>
+
+<h1>副業の確定申告は必要？20万円ルール判定</h1>
+<div class="card">
+<div class="row"><div><label for="inc">副業の収入（売上）</label><input id="inc" inputmode="numeric" value="300000"></div>
+<div><label for="exp">副業の経費</label><input id="exp" inputmode="numeric" value="80000"></div></div>
+<label for="type">あなたの状況</label><select id="type"><option value="1">会社員（年末調整を受けている）</option><option value="0">会社員ではない（自営業・無職・学生など）</option></select>
+<div class="result">副業の所得（収入−経費）：<b id="out">-</b></div>
+<div id="judge" class="judge"></div>
+</div>
+<h2>20万円ルールとは</h2>
+<p>年末調整を受けている会社員の場合、給与以外の所得（収入から経費を引いた額）が年間20万円以下なら、所得税の確定申告は原則不要です。ここでいう20万円は「収入」ではなく「所得」です。</p>
+<p>ただし、20万円以下でも住民税の申告は必要です。また、医療費控除やふるさと納税（ワンストップ特例を使わない場合）で確定申告をするときは、20万円以下の副業所得も含めて申告します。</p>
+<h2>経費の管理がめんどうな方へ</h2>
+<p>売上と経費を入力するだけで、申告書に書く数字まで自動で出るスプレッドシートを作りました。</p>
+<a class="cta" data-shop="delivery" href="#">配達員向け 収支・確定申告シートを見る</a>
+<a class="cta" data-shop="sedori" href="#">せどり・物販向け 在庫・利益・確定申告シートを見る</a>
+<a class="cta" data-shop="handmade" href="#">ハンドメイド作家向け 原価・売上・確定申告シートを見る</a>
+<a class="cta" data-shop="freelance" href="#">フリーランス向け 源泉徴収・還付額がわかるシートを見る</a>
+<script>
+window.addEventListener("load",()=>bind(["inc","exp","type"],()=>{
+ const s=num("inc")-num("exp"),emp=document.getElementById("type").value==="1",j=document.getElementById("judge");
+ document.getElementById("out").textContent=yen(s);
+ if(emp){ if(s<=200000){j.className="judge ok";j.textContent="所得が20万円以下なので、所得税の確定申告は原則不要です。住民税の申告はお住まいの市区町村に必要です。";}
+ else{j.className="judge ng";j.textContent="所得が20万円を超えるので、確定申告が必要です（期限は翌年3月15日ごろ）。";}}
+ else{j.className="judge ng";j.textContent="会社員でない方には20万円ルールはありません。所得が基礎控除などの合計を超えるなら確定申告が必要です。国民健康保険料・住民税の計算のためにも申告をおすすめします。";}
+}));
+</script>
+</main>
+<footer>計算結果は目安です。税務上の判断は税務署・税理士にご確認ください。入力した数字はこの端末の中だけで計算し、どこにも送信しません。<br><a href="index.html">ツール一覧へ戻る</a></footer>
+<script src="common.js"></script>
+</body></html>

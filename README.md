@@ -1,1 +1,5 @@
-# kakutei-sheet.github.io
+# 副業の確定申告かんたん計算
+
+副業・フリーランス向けの無料計算ツール集です。入力した数字はブラウザの中だけで計算し、どこにも送信しません。
+
+公開先: https://kakutei-sheet.github.io/
